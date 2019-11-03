@@ -11,7 +11,10 @@ body {
 }
 
 .root {
-  display: table;
+  display: flex;
+  flex-flow: column;
+  max-width:1440px;
+  width:100%;
   margin: 0 auto;
 }
 
