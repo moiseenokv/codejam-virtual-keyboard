@@ -2,7 +2,7 @@
 import kbdKeys from './data/keys';
 import './css/style.css';
 
-const createEl = (tag, cls, addTo, tagValue) => {
+const createEl = (tag, cls, addTo, tagValue, attr = null) => {
   const el = document.createElement(tag);
   if (cls !== null) {
     el.setAttribute('class', cls);
@@ -10,8 +10,14 @@ const createEl = (tag, cls, addTo, tagValue) => {
   if (tagValue !== null) {
     el.innerText = tagValue;
   }
+  if (attr !== null) {
+  }
   addTo.append(el);
   return el;
+};
+
+const getItemData = (keyItem) => {
+
 };
 
 const init = () => {
@@ -24,9 +30,16 @@ const init = () => {
 
   kbdKeys.forEach((row) => {
     const rowSection = createEl('section', 'key-row', kbdContainer, null);
-    row.forEach((key) => {
-      const clsGroup = `${key.clsName[0]} ${key.clsName[1]}`;
-      const keyDiv = createEl('div', clsGroup, rowSection, key.name);
+    row.forEach((keyObj) => {
+      const {
+        name, primaryValue, secondaryValue, clsName, type, eventCode,
+      } = keyObj;
+      const clsGroup = `${keyObj.clsName[0]} ${keyObj.clsName[1]}`;
+      const keyDiv = createEl('div', clsGroup, rowSection, name);
+      // global.console.log(keyDiv);
+      keyDiv.addEventListener('click', () => {
+        global.console.log('click', keyDiv.innerText);
+      });
     });
   });
 };
