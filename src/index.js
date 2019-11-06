@@ -122,7 +122,7 @@ const init = () => {
   const wrapper = createEl('div', 'wrapper', root, null);
   const h1 = createEl('h1', null, wrapper, 'Virtual Keyboard');
   const outputField = createEl('textarea', null, wrapper, null);
-
+  outputField.focus();
   const kbdContainer = createEl('div', 'keyboard', wrapper, null);
 
   kbdKeys.forEach((row) => {
@@ -142,6 +142,11 @@ const init = () => {
       createEl('div', clsGroup, rowSection, name, attributes);
     });
   });
+
+  if (localStorage.getItem('lang')) {
+    states.lang = localStorage.getItem('lang');
+    switchLang();
+  }
 
   const onDownListener = (event) => {
     event.preventDefault();
@@ -279,10 +284,21 @@ const init = () => {
     }
   };
 
+  const unloadListener = () => {
+    if (states.lang === 'Ru') {
+      localStorage.setItem('lang', 'En');
+    }
+
+    if (states.lang === 'En') {
+      localStorage.setItem('lang', 'Ru');
+    }
+  };
+
   document.addEventListener('mousedown', onDownListener);
   document.addEventListener('mouseup', onUpListener);
   document.addEventListener('keydown', onDownListener);
   document.addEventListener('keyup', onUpListener);
+  window.addEventListener('unload', unloadListener);
 };
 
 init();
