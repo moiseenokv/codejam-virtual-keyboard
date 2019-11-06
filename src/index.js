@@ -132,6 +132,18 @@ const init = () => {
           }
           outputField.setSelectionRange(states.position, states.position);
         }
+
+        if (setValue === 'ArrowRight') {
+          if (states.position !== null) {
+            if (states.position === outputField.textLength) {
+              states.position = null;
+              outputField.setSelectionRange(outputField.textLength, outputField.textLength);
+            } else {
+              states.position += 1;
+              outputField.setSelectionRange(states.position, states.position);
+            }
+          }
+        }
       }
     }
   };
