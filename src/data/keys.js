@@ -469,7 +469,7 @@ const kbdKeys = [
       primaryValue: ['<!--Spacebar-->', '<!--Spacebar-->'],
       secondaryValue: null,
       clsName: ['key', 'five', ''],
-      type: 1,
+      type: 2,
       eventCode: 'Space',
     },
     {

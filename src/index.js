@@ -151,6 +151,10 @@ const init = () => {
             outputField.setSelectionRange(states.position, states.position);
           }
         }
+
+        if (setValue === ' ' || setValue === '') { // Space
+          outputField.value += ' '.repeat(1);
+        }
       }
     }
   };
