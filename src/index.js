@@ -119,6 +119,10 @@ const init = () => {
         if (setValue === 'Enter') {
           outputField.value += '\n';
         }
+
+        if (setValue === 'Tab') {
+          outputField.value += ' '.repeat(4);
+        }
       }
     }
   };
