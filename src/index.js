@@ -47,6 +47,7 @@ const init = () => {
   const wrapper = createEl('div', 'wrapper', root, null);
   const h1 = createEl('h1', null, wrapper, 'Virtual Keyboard');
   const outputField = createEl('textarea', null, wrapper, null);
+  outputField.focus();
   const kbdContainer = createEl('div', 'keyboard', wrapper, null);
 
   kbdKeys.forEach((row) => {
@@ -97,7 +98,6 @@ const init = () => {
       if (parseInt(someKey.getAttribute('data-type'), 10) <= 1) {
         if (states.position == null) {
           outputField.value += setValue;
-          outputField.focus();
         } else {
           outputField.value = `${outputField.value.slice(0, states.position)}${setValue}${outputField.value.slice(states.position, outputField.textLength)}`;
           states.position += 1;
@@ -122,6 +122,15 @@ const init = () => {
 
         if (setValue === 'Tab') {
           outputField.value += ' '.repeat(4);
+        }
+
+        if (setValue === 'ArrowLeft') {
+          if (states.position == null) {
+            states.position = outputField.textLength - 1;
+          } else {
+            states.position -= 1;
+          }
+          outputField.setSelectionRange(states.position, states.position);
         }
       }
     }
