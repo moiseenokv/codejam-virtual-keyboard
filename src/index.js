@@ -115,6 +115,10 @@ const init = () => {
             outputField.value = outputField.value.slice(0, -1);
           }
         }
+
+        if (setValue === 'Enter') {
+          outputField.value += '\n';
+        }
       }
     }
   };
