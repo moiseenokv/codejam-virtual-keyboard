@@ -5,7 +5,7 @@ const kbdKeys = [
       primaryValue: ['`', 'ё'],
       secondaryValue: ['~', 'Ё'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Backquote',
     },
     {
@@ -13,7 +13,7 @@ const kbdKeys = [
       primaryValue: ['1', '1'],
       secondaryValue: ['!', '!'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit1',
     },
     {
@@ -21,7 +21,7 @@ const kbdKeys = [
       primaryValue: ['2', '2'],
       secondaryValue: ['@', '"'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit2',
     },
     {
@@ -29,7 +29,7 @@ const kbdKeys = [
       primaryValue: ['3', '3'],
       secondaryValue: ['#', '№'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit3',
     },
     {
@@ -37,7 +37,7 @@ const kbdKeys = [
       primaryValue: ['4', '4'],
       secondaryValue: ['$', ';'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit4',
     },
     {
@@ -45,7 +45,7 @@ const kbdKeys = [
       primaryValue: ['5', '5'],
       secondaryValue: ['%', '%'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit5',
     },
     {
@@ -53,7 +53,7 @@ const kbdKeys = [
       primaryValue: ['6', '6'],
       secondaryValue: ['^', ':'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit6',
     },
     {
@@ -61,7 +61,7 @@ const kbdKeys = [
       primaryValue: ['7', '7'],
       secondaryValue: ['&', '?'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit7',
     },
     {
@@ -69,7 +69,7 @@ const kbdKeys = [
       primaryValue: ['8', '8'],
       secondaryValue: ['*', '*'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit8',
     },
     {
@@ -77,7 +77,7 @@ const kbdKeys = [
       primaryValue: ['9', '9'],
       secondaryValue: ['(', '('],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit9',
     },
     {
@@ -85,7 +85,7 @@ const kbdKeys = [
       primaryValue: ['0', '0'],
       secondaryValue: [')', ')'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Digit0',
     },
     {
@@ -93,7 +93,7 @@ const kbdKeys = [
       primaryValue: ['-', '-'],
       secondaryValue: ['_', '_'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Minus',
     },
     {
@@ -101,7 +101,7 @@ const kbdKeys = [
       primaryValue: ['+', '+'],
       secondaryValue: ['=', '='],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Equal',
     },
     {
@@ -109,7 +109,7 @@ const kbdKeys = [
       primaryValue: ['Backspace', 'Backspace'],
       secondaryValue: null,
       clsName: ['key', 'two', ''],
-      type: 1,
+      type: 2,
       eventCode: 'Backspace',
     },
   ],
@@ -119,7 +119,7 @@ const kbdKeys = [
       primaryValue: ['Tab', 'Tab'],
       secondaryValue: null,
       clsName: ['key', 'one-one-half', 'l'],
-      type: 1,
+      type: 2,
       eventCode: 'Tab',
     },
     {
@@ -207,7 +207,7 @@ const kbdKeys = [
       primaryValue: ['[', 'х'],
       secondaryValue: ['{', 'Х'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'BracketLeft',
     },
     {
@@ -215,7 +215,7 @@ const kbdKeys = [
       primaryValue: [']', 'ъ'],
       secondaryValue: [']', 'Ъ'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'BracketRight',
     },
     {
@@ -223,7 +223,7 @@ const kbdKeys = [
       primaryValue: ['|', '/'],
       secondaryValue: ['/', '|'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Backslash',
     },
     {
@@ -231,7 +231,7 @@ const kbdKeys = [
       primaryValue: ['Del', 'Del'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'Delete',
     },
   ],
@@ -241,8 +241,8 @@ const kbdKeys = [
       primaryValue: ['Caps Lock', 'Caps Lock'],
       secondaryValue: null,
       clsName: ['key', 'one-one-half', 'l'],
-      type: 1,
-      eventCode: 'Cpas Lock',
+      type: 2,
+      eventCode: 'CapsLock',
     },
     {
       name: 'a',
@@ -321,7 +321,7 @@ const kbdKeys = [
       primaryValue: [';', 'ж'],
       secondaryValue: [':', 'Ж'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Semicolon',
     },
     {
@@ -329,7 +329,7 @@ const kbdKeys = [
       primaryValue: ['"', 'э'],
       secondaryValue: ['"', 'Э'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Quote',
     },
     {
@@ -337,7 +337,7 @@ const kbdKeys = [
       primaryValue: ['Enter', 'Enter'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'Enter',
     },
   ],
@@ -347,7 +347,7 @@ const kbdKeys = [
       primaryValue: ['Shift', 'Shift'],
       secondaryValue: null,
       clsName: ['key', 'two-two-half', 'l'],
-      type: 1,
+      type: 2,
       eventCode: 'ShiftLeft',
     },
     {
@@ -411,7 +411,7 @@ const kbdKeys = [
       primaryValue: [',', 'б'],
       secondaryValue: ['<', 'б'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Comma',
     },
     {
@@ -419,7 +419,7 @@ const kbdKeys = [
       primaryValue: ['.', 'ю'],
       secondaryValue: ['>', 'ю'],
       clsName: ['key', 'one', ''],
-      type: 0,
+      type: 1,
       eventCode: 'Period',
     },
     {
@@ -427,7 +427,7 @@ const kbdKeys = [
       primaryValue: ['Up', 'Up'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'ArrowUp',
     },
     {
@@ -435,7 +435,7 @@ const kbdKeys = [
       primaryValue: ['Shift', 'Shift'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'ShiftRight',
     },
   ],
@@ -445,15 +445,15 @@ const kbdKeys = [
       primaryValue: ['Ctrl', 'Ctrl'],
       secondaryValue: null,
       clsName: ['key', 'two-two-half', 'l'],
-      type: 1,
-      eventCode: 'CtrlRight',
+      type: 2,
+      eventCode: 'ControlLeft',
     },
     {
       name: 'Win',
       primaryValue: ['Win', 'Win'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'MetaLeft',
     },
     {
@@ -461,7 +461,7 @@ const kbdKeys = [
       primaryValue: ['Alt', 'Alt'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'AltLeft',
     },
     {
@@ -477,7 +477,7 @@ const kbdKeys = [
       primaryValue: ['Alt', 'Alt'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'AltRight',
     },
     {
@@ -485,15 +485,15 @@ const kbdKeys = [
       primaryValue: ['Ctrl', 'Ctrl'],
       secondaryValue: null,
       clsName: ['key', 'one-one-half', 'l'],
-      type: 1,
-      eventCode: 'CtrlRight',
+      type: 2,
+      eventCode: 'ControlRight',
     },
     {
       name: 'Left',
       primaryValue: ['Left', 'Left'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'ArrowLeft',
     },
     {
@@ -501,7 +501,7 @@ const kbdKeys = [
       primaryValue: ['Down', 'Down'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'ArrowDown',
     },
     {
@@ -509,7 +509,7 @@ const kbdKeys = [
       primaryValue: ['Right', 'Right'],
       secondaryValue: null,
       clsName: ['key', 'one', ''],
-      type: 1,
+      type: 2,
       eventCode: 'ArrowRight',
     },
   ],
