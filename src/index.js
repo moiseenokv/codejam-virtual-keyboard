@@ -144,6 +144,13 @@ const init = () => {
             }
           }
         }
+
+        if (setValue === 'Delete') {
+          if (states.position !== null) {
+            outputField.value = `${outputField.value.slice(0, states.position)}${outputField.value.slice(states.position + 1, outputField.textLength)}`;
+            outputField.setSelectionRange(states.position, states.position);
+          }
+        }
       }
     }
   };
