@@ -71,7 +71,7 @@ textarea {
 
 sup, sub { outline:1px solid magenta; display:block; align-self:center; }
 
-.key:active,  .active { transform:translateY(1px); background:#333; box-shadow:0 1px 0 #000;}
+.key:active,  .active, .reactive { transform:translateY(1px); background:#333; box-shadow:0 1px 0 #000;}
 
 .one { flex:1; } /* one */
 .one-one-half { flex:1.5; } /* One and one half */
