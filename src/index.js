@@ -156,7 +156,12 @@ const init = () => {
 
     if (event.code) {
       someKey = document.querySelector(`div[data-event=${event.code}]`);
-      setValue = someKey.innerText;
+      global.console.log(event.code);
+      if (event.code === 'CapsLock') {
+        setValue = event.code;
+      } else {
+        setValue = someKey.innerText;
+      }
     }
 
     if (event.target.hasAttribute('data-event')) {
