@@ -237,7 +237,7 @@ const kbdKeys = [
   ],
   [
     {
-      name: 'CpasLock',
+      name: 'CapsLock',
       primaryValue: ['CapsLock', 'CapsLock'],
       secondaryValue: null,
       clsName: ['key', 'one-one-half', 'l'],
