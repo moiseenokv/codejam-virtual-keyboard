@@ -67,8 +67,14 @@ const shiftTransform = () => {
     item.classList.toggle('upper');
   });
 
+  const domElAlt = document.querySelectorAll('div[data-type="1"]');
+  Object.values(domElAlt).forEach((item) => {
+    item.classList.toggle('upper');
+  });
+
+
   if (states.lang === 'En') {
-    if ((states.ShiftLeft === true || states.ShiftRight === true || states.Capslock === true)) {
+    if ((states.ShiftLeft === true || states.ShiftRight === true || states.CapsLock === true)) {
       kbdKeys.forEach((row) => {
         row.forEach((item) => {
           const { type, eventCode, secondaryValue } = item;
@@ -92,7 +98,7 @@ const shiftTransform = () => {
   }
 
   if (states.lang === 'Ru') {
-    if ((states.ShiftLeft === true || states.ShiftRight === true || states.Capslock === true)) {
+    if ((states.ShiftLeft === true || states.ShiftRight === true || states.CapsLock === true)) {
       kbdKeys.forEach((row) => {
         row.forEach((item) => {
           const { type, eventCode, secondaryValue } = item;
@@ -156,7 +162,6 @@ const init = () => {
 
     if (event.code) {
       someKey = document.querySelector(`div[data-event=${event.code}]`);
-      global.console.log(event.code);
       if (event.code === 'CapsLock') {
         setValue = event.code;
       } else {
@@ -268,12 +273,6 @@ const init = () => {
         if (setValue === ' ' || setValue === '') { // Space
           outputField.value += ' '.repeat(1);
         }
-
-        if (setValue === 'CapsLock') {
-          states.ShiftLeft = false;
-          states.ShiftRight = false;
-          shiftTransform();
-        }
       }
 
       if (parseInt(someKey.getAttribute('data-type'), 10) === 3) {
@@ -290,6 +289,12 @@ const init = () => {
             document.querySelector('div[data-event="AltLeft"]').classList.remove('reactive');
             document.querySelector('div[data-event="AltRight"]').classList.remove('reactive');
           }
+        }
+
+        if (setValue === 'CapsLock') {
+          states.ShiftLeft = false;
+          states.ShiftRight = false;
+          shiftTransform();
         }
       }
     }

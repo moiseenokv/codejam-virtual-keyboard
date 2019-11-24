@@ -241,7 +241,7 @@ const kbdKeys = [
       primaryValue: ['CapsLock', 'CapsLock'],
       secondaryValue: null,
       clsName: ['key', 'one-one-half', 'l'],
-      type: 2,
+      type: 3,
       eventCode: 'CapsLock',
     },
     {
