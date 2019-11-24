@@ -3,7 +3,7 @@ import kbdKeys from './data/keys';
 import './css/style.css';
 
 const states = {
-  Capslock: false,
+  CapsLock: false,
   ShiftLeft: false,
   ShiftRight: false,
   ControlLeft: false,
@@ -68,7 +68,7 @@ const shiftTransform = () => {
   });
 
   if (states.lang === 'En') {
-    if ((states.ShiftLeft === true || states.ShiftRight === true)) {
+    if ((states.ShiftLeft === true || states.ShiftRight === true || states.Capslock === true)) {
       kbdKeys.forEach((row) => {
         row.forEach((item) => {
           const { type, eventCode, secondaryValue } = item;
@@ -92,7 +92,7 @@ const shiftTransform = () => {
   }
 
   if (states.lang === 'Ru') {
-    if ((states.ShiftLeft === true || states.ShiftRight === true)) {
+    if ((states.ShiftLeft === true || states.ShiftRight === true || states.Capslock === true)) {
       kbdKeys.forEach((row) => {
         row.forEach((item) => {
           const { type, eventCode, secondaryValue } = item;
@@ -156,7 +156,7 @@ const init = () => {
 
     if (event.code) {
       someKey = document.querySelector(`div[data-event=${event.code}]`);
-      setValue = event.key;
+      setValue = someKey.innerText;
     }
 
     if (event.target.hasAttribute('data-event')) {
@@ -170,7 +170,8 @@ const init = () => {
       || someKey.getAttribute('data-event') === 'ControlLeft'
       || someKey.getAttribute('data-event') === 'ControlRight'
       || someKey.getAttribute('data-event') === 'AltLeft'
-      || someKey.getAttribute('data-event') === 'AltRight') {
+      || someKey.getAttribute('data-event') === 'AltRight'
+      || someKey.getAttribute('data-event') === 'CapsLock') {
         states.current = someKey;
         const keyID = someKey.getAttribute('data-event');
         if (states[keyID] === false) {
@@ -252,8 +253,21 @@ const init = () => {
           }
         }
 
+        if (setValue === '') {
+          if (states.position !== null) {
+            outputField.value = `${outputField.value.slice(0, states.position)}${outputField.value.slice(states.position + 1, outputField.textLength)}`;
+            outputField.setSelectionRange(states.position, states.position);
+          }
+        }
+
         if (setValue === ' ' || setValue === '') { // Space
           outputField.value += ' '.repeat(1);
+        }
+
+        if (setValue === 'CapsLock') {
+          states.ShiftLeft = false;
+          states.ShiftRight = false;
+          shiftTransform();
         }
       }
 
